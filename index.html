@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ford Escape | Manifest Like You Mean It</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================
+   FULL WIDTH HERO
+========================= */
+
+.top-section {
+    position: relative;
+    width: 100%;
+    height: 720px;
+    min-height: 600px;
+    overflow: hidden;
+    color: white;
+    background-color: #17324d;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.12),
+            rgba(0,0,0,0.12)
+        ),
+        url("images/hero-background.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* NAVIGATION OVER THE HERO */
+
+.navbar {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 5%;
+    background: transparent;
+    color: white;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.ford-logo {
+    width: 48px;
+    height: 25px;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    font-style: italic;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-left ul {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    list-style: none;
+}
+
+.navbar a {
+    color: white;
+}
+
+.nav-left li a,
+.nav-right a {
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-icon span {
+    font-size: 17px;
+}
+
+/* HERO CAR */
+
+.hero-car {
+    position: absolute;
+    z-index: 2;
+    left: 7%;
+    bottom: 95px;
+
+    width: 53%;
+    height: 65%;
+
+    object-fit: contain;
+    object-position: center bottom;
+}
+
+/* HERO HEADLINE */
+
+.hero-copy {
+    position: absolute;
+    z-index: 3;
+    top: 24%;
+    right: 7%;
+    width: 39%;
+
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.hero-copy h1 {
+    color: white;
+    font-size: clamp(48px, 6.5vw, 90px);
+    font-weight: 900;
+    line-height: 0.83;
+    letter-spacing: -3px;
+}
+
+/* VEHICLE DETAILS */
+
+.vehicle-info {
+    position: absolute;
+    z-index: 4;
+    left: 6%;
+    bottom: 28px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.vehicle-info .year {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.vehicle-info h2 {
+    font-size: 34px;
+    margin: 3px 0;
+}
+
+.vehicle-info .starting-price {
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.pill {
+    display: inline-block;
+    padding: 10px 17px;
+    margin-right: 7px;
+    border-radius: 30px;
+    background: white;
+    color: #222;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.pill.outline {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+/* =========================
+   MODEL SECTION
+========================= */
+
+.models {
+    width: 100%;
+    background: white;
+}
+
+/* HEADING AREA */
+
+.models-heading {
+    width: 100%;
+    padding: 65px 8% 35px;
+    background: white;
+}
+
+.models-heading h2 {
+    font-size: clamp(25px, 3vw, 38px);
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+
+.models-heading p {
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+/* =========================
+   FULL WIDTH CITY IMAGE
+========================= */
+
+.city-strip {
+    position: relative;
+
+    width: 100%;
+    height: 230px;
+
+    overflow: hidden;
+
+    background-color: #e8edf2;
+    background-image: url("images/city-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* FOUR VEHICLES OVER THE CITY */
+
+.car-row {
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: end;
+
+    padding: 0 4%;
+    gap: 15px;
+}
+
+.car-visual {
+    height: 150px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.car-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+}
+
+/* =========================
+   FOUR INFORMATION BOXES
+========================= */
+
+.car-details {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 22px 5% 35px;
+    background: white;
+}
+
+.car-box {
+    background: #f1f1f1;
+    padding: 20px 15px;
+    min-width: 0;
+}
+
+.car-box h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.car-box .price {
+    font-size: 10px;
+    margin-bottom: 15px;
+}
+
+.car-box ul {
+    padding-left: 13px;
+    font-size: 10px;
+    line-height: 1.8;
+    min-height: 90px;
+}
+
+.build-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 9px 18px;
+    background: #0870b8;
+    color: white;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+    .top-section {
+        height: 620px;
+    }
+
+    .navbar {
+        padding: 18px 3%;
+    }
+
+    .nav-left {
+        gap: 15px;
+    }
+
+    .nav-left ul {
+        gap: 13px;
+    }
+
+    .nav-right {
+        gap: 12px;
+    }
+
+    .nav-left li a,
+    .nav-right a {
+        font-size: 9px;
+    }
+
+    .hero-copy {
+        right: 4%;
+        width: 43%;
+    }
+
+    .hero-car {
+        left: 2%;
+        width: 58%;
+    }
+
+    .city-strip {
+        height: 190px;
+    }
+
+    .car-visual {
+        height: 125px;
+    }
+
+    .car-details {
+        gap: 8px;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .car-box {
+        padding: 13px 9px;
+    }
+
+    .car-box h3 {
+        font-size: 11px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 560px) {
+
+    .top-section {
+        height: 570px;
+        min-height: 570px;
+    }
+
+    .navbar {
+        padding: 15px 3%;
+        gap: 8px;
+    }
+
+    .ford-logo {
+        width: 38px;
+        height: 22px;
+        font-size: 10px;
+    }
+
+    .nav-left {
+        gap: 10px;
+    }
+
+    .nav-left ul {
+        gap: 8px;
+    }
+
+    .nav-left li a,
+    .nav-right a {
+        font-size: 7px;
+    }
+
+    .nav-right {
+        gap: 8px;
+    }
+
+    .nav-icon span {
+        font-size: 12px;
+    }
+
+    .hero-copy {
+        top: 100px;
+        right: 5%;
+        width: 70%;
+    }
+
+    .hero-copy h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .hero-car {
+        width: 95%;
+        height: 55%;
+        left: 0;
+        bottom: 85px;
+    }
+
+    .vehicle-info {
+        left: 5%;
+        bottom: 15px;
+    }
+
+    .vehicle-info h2 {
+        font-size: 25px;
+    }
+
+    .models-heading {
+        padding: 40px 5% 25px;
+    }
+
+    .models-heading h2 {
+        font-size: 24px;
+    }
+
+    .city-strip {
+        height: 125px;
+    }
+
+    .car-row {
+        gap: 3px;
+        padding: 0 2%;
+    }
+
+    .car-visual {
+        height: 85px;
+    }
+
+    .car-details {
+        gap: 5px;
+        padding: 12px 2% 25px;
+    }
+
+    .car-box {
+        padding: 10px 5px;
+    }
+
+    .car-box h3 {
+        font-size: 9px;
+    }
+
+    .car-box .price {
+        font-size: 8px;
+    }
+
+    .car-box ul {
+        font-size: 8px;
+        padding-left: 10px;
+        min-height: 100px;
+    }
+
+    .build-button {
+        font-size: 7px;
+        padding: 8px 6px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HERO AND NAVIGATION
+========================= -->
+
+<section class="top-section">
+
+    <header class="navbar">
+
+        <div class="nav-left">
+
+            <a href="#" class="ford-logo">Ford</a>
+
+            <ul>
+                <li><a href="#">Vehicles</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">Finance</a></li>
+            </ul>
+
+        </div>
+
+        <div class="nav-right">
+
+            <a href="#" class="nav-icon">
+                <span>⌖</span> Location
+            </a>
+
+            <a href="#" class="nav-icon">
+                <span>⌕</span> Search
+            </a>
+
+            <a href="#" class="nav-icon">
+                <span>♙</span>
+            </a>
+
+        </div>
+
+    </header>
+
+    <img
+        src="images/ford-escape-cutout.png"
+        class="hero-car"
+        alt="Red Ford Escape">
+
+    <div class="hero-copy">
+        <h1>
+            Manifest<br>
+            Like You<br>
+            Mean It
+        </h1>
+    </div>
+
+    <div class="vehicle-info">
+
+        <p class="year">2026</p>
+
+        <h2>Escape®</h2>
+
+        <p class="starting-price">
+            Starting at $30,350¹
+        </p>
+
+        <a href="#models" class="pill">
+            Search Inventory
+        </a>
+
+        <a href="#models" class="pill outline">
+            2026 Escape
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     VEHICLE MODELS
+========================= -->
+
+<section class="models" id="models">
+
+    <div class="models-heading">
+
+        <h2>Find the Right Ride for Your Road</h2>
+
+        <p>4 Options to Make Your Move.</p>
+
+    </div>
+
+
+    <!-- FULL-WIDTH CITY BACKGROUND -->
+
+    <div class="city-strip">
+
+        <div class="car-row">
+
+            <div class="car-visual">
+                <img
+                    src="images/escape-hybrid.png"
+                    alt="Escape Plug-In Hybrid">
+            </div>
+
+            <div class="car-visual">
+                <img
+                    src="images/escape-active.png"
+                    alt="Escape Active">
+            </div>
+
+            <div class="car-visual">
+                <img
+                    src="images/escape-st-line.png"
+                    alt="Escape ST-Line">
+            </div>
+
+            <div class="car-visual">
+                <img
+                    src="images/escape-platinum.png"
+                    alt="Escape Platinum">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- VEHICLE INFORMATION BOXES -->
+
+    <div class="car-details">
+
+        <article class="car-box">
+
+            <h3>Escape® Plug-In Hybrid</h3>
+
+            <p class="price">Starting at $35,400¹</p>
+
+            <ul>
+                <li>2.5L Atkinson Cycle 4-Hybrid Engine</li>
+                <li>Standard Front-Wheel Drive</li>
+                <li>13.2" Center Display</li>
+                <li>10.1" EPS Package (Combined)</li>
+            </ul>
+
+            <a href="#" class="build-button">
+                Build &amp; Price
+            </a>
+
+        </article>
+
+
+        <article class="car-box">
+
+            <h3>Escape Active®</h3>
+
+            <p class="price">Starting at $30,350¹</p>
+
+            <ul>
+                <li>2.5L Atkinson Cycle 4-Hybrid Engine</li>
+                <li>Standard Front-Wheel Drive</li>
+                <li>13.2" Center Display</li>
+                <li>10.1" EPS Package (Combined)</li>
+            </ul>
+
+            <a href="#" class="build-button">
+                Build &amp; Price
+            </a>
+
+        </article>
+
+
+        <article class="car-box">
+
+            <h3>Escape® ST-Line</h3>
+
+            <p class="price">Starting at $31,195¹</p>
+
+            <ul>
+                <li>2.5L Atkinson Cycle 4-Hybrid Engine</li>
+                <li>Standard Front-Wheel Drive</li>
+                <li>13.2" Center Display</li>
+                <li>10.1" EPS Package (Combined)</li>
+            </ul>
+
+            <a href="#" class="build-button">
+                Build &amp; Price
+            </a>
+
+        </article>
+
+
+        <article class="car-box">
+
+            <h3>Escape® Platinum™</h3>
+
+            <p class="price">Starting at $37,940¹</p>
+
+            <ul>
+                <li>2.5L Atkinson Cycle 4-Hybrid Engine</li>
+                <li>Standard Front-Wheel Drive</li>
+                <li>13.2" Center Display</li>
+                <li>10.1" EPS Package (Combined)</li>
+            </ul>
+
+            <a href="#" class="build-button">
+                Build &amp; Price
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+</body>
+</html>
