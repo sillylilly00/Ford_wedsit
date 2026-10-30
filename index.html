@@ -57,25 +57,31 @@ a {
 
 .navbar {
     position: absolute;
-    z-index: 10;
     top: 0;
     left: 0;
+    right: 0;
+
     width: 100%;
-    min-height: 65px;
+    max-width: none;
+    margin: 0;
+
+    height: 65px;
+    padding: 0 25px;
+    box-sizing: border-box;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 0px 35%;
+    z-index: 10;
     background: transparent;
-    color: white;
 }
 
 .nav-left {
     display: flex;
     align-items: center;
     gap: 28px;
+    margin-right: auto;
 }
 
 .ford-logo {
@@ -113,9 +119,10 @@ a {
 }
 
 .nav-right {
-    display: flex;
+     display: flex;
     align-items: center;
     gap: 22px;
+    margin-left: auto;
 }
 
 .nav-icon {
